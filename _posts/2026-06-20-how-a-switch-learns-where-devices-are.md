@@ -41,6 +41,8 @@ A MAC address is a Layer 2 identifier associated with a network interface. It is
 AA:BB:CC:DD:EE:FF
 ```
 
+---
+
 ## MAC Address Table 
 
 Switches use and maintain a MAC address table.
@@ -87,6 +89,8 @@ However, it still has no idea where BB:BB resides.
 
 This is where flooding comes in.
 
+---
+
 ## Flooding
 
 If the switch has just been powered on, then the destination MAC address may be unknown to the switch.
@@ -99,9 +103,13 @@ One reason a switch floods traffic is when it receives a unicast frame (a frame 
 
 This behaviour is known as unknown unicast flooding.
 
+---
+
 ## Forwarding
 
 Once the `<switch port>:<MAC address>` mapping is learned and populated in the MAC address table, the switch uses the MAC address table to deliver subsequent frames to the appropriate switch port only.
+
+---
 
 ## Putting It All Together
 
@@ -202,11 +210,15 @@ BB:BB -> Port 2
 
 Now that the MAC address table contains mappings for AA:AA and BB:BB, future traffic between Host A and Host B is forwarded directly to the appropriate ports, with no further learning or flooding required.
 
+---
+
 ## Why This Matters For Kubernetes Engineers
 
 Modern Kubernetes clusters may use virtual switches, bridges, overlay networks, VXLAN, and cloud networking constructs, but the underlying principles remain the same.
 
 Understanding how switches learn MAC addresses provides a foundation for understanding more advanced topics such as VLANs, overlay networking, OVN-Kubernetes, and cloud networking.
+
+---
 
 ## Follow-On
 
