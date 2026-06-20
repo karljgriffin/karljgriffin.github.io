@@ -9,8 +9,6 @@ tags:
   - layer-2
 ---
 
-# How a Switch Learns Where Devices Are
-
 ---
 
 ## Introduction
