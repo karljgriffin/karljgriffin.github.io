@@ -30,6 +30,7 @@ The answer lies in MAC addresses and something called a MAC address table.
 A switch is a Layer 2 (Data Link layer) device that is used to transfer data/facilitate communication between hosts *within* a network.
 
 Switches use and maintain a MAC address table to keep track of which devices are reachable through which ports.
+
 ---
 
 ## MAC Addresses
