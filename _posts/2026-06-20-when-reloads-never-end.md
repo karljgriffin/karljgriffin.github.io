@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "When Reloads Never End: Investigating HAProxy Process Accumulation in OpenShift Ingress"
-date: 2026-06-20
+date: 2026-06-27
 description: "Investigating HAProxy reloads, long-lived connections, and process accumulation in OpenShift ingress."
 tags:
   - openshift
