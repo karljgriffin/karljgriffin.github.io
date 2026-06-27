@@ -7,34 +7,69 @@
 
     <style>
         body {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
+            max-width: 860px;
+            margin: 48px auto;
+            padding: 0 22px;
             font-family: Arial, sans-serif;
             line-height: 1.7;
             color: #222;
+            background: #fafafa;
         }
 
-        h1, h2 {
-            margin-top: 1.5em;
+        h1 {
+            font-size: 2.4rem;
+            margin-bottom: 0.2em;
+        }
+
+        h2 {
+            margin-top: 2.2em;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.3em;
         }
 
         a {
             color: #0366d6;
             text-decoration: none;
+            font-weight: 500;
         }
 
         a:hover {
             text-decoration: underline;
         }
 
-        ul {
-            padding-left: 20px;
+        .tagline {
+            font-size: 1.15em;
+            color: #555;
         }
 
-        .tagline {
-            font-size: 1.1em;
+        .article {
+            margin-bottom: 1.2em;
+        }
+
+        .article-title {
+            font-size: 1.05em;
+        }
+
+        .article-meta {
+            color: #666;
+            font-size: 0.95em;
+            margin-top: 0.15em;
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: 0.8em;
+            padding: 2px 7px;
+            border: 1px solid #ccc;
+            border-radius: 999px;
             color: #555;
+            margin-right: 6px;
+        }
+
+        footer {
+            margin-top: 3em;
+            color: #777;
+            font-size: 0.9em;
         }
     </style>
 </head>
@@ -43,31 +78,62 @@
     <h1>Karl Griffin</h1>
 
     <p class="tagline">
-        Software Engineer focused on cloud infrastructure,
-        Kubernetes, OpenShift, networking, and distributed systems.
+        Software Engineer focused on cloud infrastructure, Kubernetes,
+        OpenShift, networking, and distributed systems.
     </p>
 
     <h2>Infrastructure from First Principles</h2>
 
     <p>
-        This site is a collection of notes, explanations, and articles
-        written while learning cloud infrastructure, networking,
-        Kubernetes, and distributed systems from first principles.
-    </p>
-
-    <h2>About</h2>
-
-    <p>
-        I'm a Software Engineer working primarily in cloud infrastructure.
-        My interests include networking, Kubernetes, OpenShift, AWS,
-        Terraform, GitOps, platform engineering, and distributed systems.
+        I write about networking, Kubernetes, distributed systems, and cloud
+        infrastructure from first principles.
     </p>
 
     <p>
-        The goal of this site is not to present myself as an expert,
-        but to document what I'm learning and to explain concepts clearly
-        enough that others may find them useful.
+        Some articles explain fundamental concepts like switching, routing,
+        and ARP. Others are detailed investigations into real infrastructure
+        problems, with sensitive details removed or anonymised.
     </p>
+
+    <h2>Foundations</h2>
+
+    <div class="article">
+        <div class="article-title">
+            <span class="badge">Foundation</span>
+            <a href="/2026/06/20/how-a-switch-learns-where-devices-are.html">
+                How a Switch Learns Where Devices Are
+            </a>
+        </div>
+        <div class="article-meta">
+            MAC addresses, MAC address tables, learning, flooding, and forwarding.
+        </div>
+    </div>
+
+    <h2>Infrastructure Investigations</h2>
+
+    <div class="article">
+        <div class="article-title">
+            <span class="badge">Investigation</span>
+            <a href="/2026/06/20/when-reloads-never-end.html">
+                When Reloads Never End
+            </a>
+        </div>
+        <div class="article-meta">
+            HAProxy reloads, long-lived connections, and process accumulation in OpenShift ingress.
+        </div>
+    </div>
+
+    <h2>Planned Articles</h2>
+
+    <ul>
+        <li>Why ARP Exists</li>
+        <li>What Actually Happens When You Ping Another Machine</li>
+        <li>Why Routers Exist</li>
+        <li>Routing Tables and Longest Prefix Match</li>
+        <li>Why VPNs Break Internet Connectivity</li>
+        <li>How Pods Get IP Addresses in Kubernetes</li>
+        <li>Understanding Overlay Networks</li>
+    </ul>
 
     <h2>Links</h2>
 
@@ -79,29 +145,9 @@
         </li>
     </ul>
 
-    <h2>Articles</h2>
-
-    <ul>
-        <li>
-            <a href="/2026/06/20/how-a-switch-learns-where-devices-are.html">
-                How a Switch Learns Where Devices Are
-            </a>
-        </li>
-    </ul>
-
-    <h2>Planned Articles</h2>
-
-    <ul>
-        <li>Why ARP Exists</li>
-        <li>What Actually Happens When You Ping Another Machine</li>
-        <li>Why Routers Exist</li>
-        <li>Routing Tables and Longest Prefix Match</li>
-        <li>Why VPNs Break Internet Connectivity</li>
-        <li>How Pods Get IP Addresses in Kubernetes</li>
-        <li>How Kubernetes Services Route Traffic</li>
-        <li>Understanding Overlay Networks</li>
-        <li>Pod-to-Pod Communication Across Nodes</li>
-    </ul>
+    <footer>
+        Infrastructure from First Principles.
+    </footer>
 
 </body>
 </html>
